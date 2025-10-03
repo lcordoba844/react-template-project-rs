@@ -20,8 +20,10 @@ export default function Home() {
                 <Card
                   id={prop.id}
                   tipo={prop.alquiler_venta}
+                  titulo={prop.titulo}
+                  ciudad={prop.ciudad}
                   direccion={prop.direccion}
-                  imagen={prop.imagen}
+                  imagen={prop.imagenes && prop.imagenes.length > 0 ? prop.imagenes[0] : ""}
                   banos= {prop.banos}
                   dormitorios={prop.dormitorios}
                   metros2={prop.metros2construidos}

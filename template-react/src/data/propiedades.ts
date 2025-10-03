@@ -1,34 +1,35 @@
 import fotoLinda from "../assets/DptoBarrioLourdes.png"
 import fotoFea from "../assets/19bb0fc2c7ce-dubai-panoramica-t.jpg"
 import fotoMaso from "../assets/dubai123.jpg"
+import casaEsquina from "../assets/casaEsquina.jpeg"
 
 export const propiedades = [
   {
     id: "1",
-    titulo: "Departamento Moderno en el Centro",
-    tipo: "Departamento",
-    direccion: "Av. Corrientes 1234, Rosario",
-    barrio: "Centro",
-    ciudad: "Rosario",
-    provincia: "Santa Fe",
+    titulo: "Hermosa Casa en 47 y 11",
+    tipo: "Casa",
+    direccion: "47 y 11",
+    barrio: "Semi-Centro",
+    ciudad: "Colón",
+    provincia: "Buenos Aires",
     banos: "2",
-    metros2construidos: "85",
-    metros2cubiertos: "60",
-    metros2semicubiertos: "75",
-    ambientes: "2",
+    metros2construidos: "178",
+    metros2cubiertos: "178",
+    metros2semicubiertos: "",
+    ambientes: "5",
     dormitorios: "3",
-    antiguedad: "20",
-    condicion: "Bueno",
+    antiguedad: "18",
+    condicion: "Excelente",
     categoriaEdificio: "Muy buena",
-    frente_contrafrente: "Contrafrente",
+    frente_contrafrente: "Frente",
     alquiler_venta: "Venta",
-    servicios: ["WiFi", "Aire acondicionado", "Calefacción", "Balcon"],
-    precio: "USD 60.000",
-    plantas: "10",
+    servicios: ["WiFi", "Aire acondicionado", "Calefacción"],
+    precio: "USD 140.000",
+    plantas: "1",
     orientacion: "oeste",
-    tipoDePiso: "Parquet",
-    cochera: "No",
-    imagen: fotoFea, // placeholder
+    tipoDePiso: "Porcelanato",
+    cochera: "si",
+    imagenes: [casaEsquina, fotoFea, fotoLinda, fotoMaso]
   },
   {
     id: "2",
@@ -55,7 +56,7 @@ export const propiedades = [
     orientacion: "oeste",
     tipoDePiso: "Parquet",
     cochera: "No",
-    imagen: fotoLinda,
+    imagenes: [fotoLinda, casaEsquina, fotoFea, fotoMaso]
   },
   {
     id: "3",
@@ -82,7 +83,7 @@ export const propiedades = [
     orientacion: "este",
     tipoDePiso: "ceramica",
     cochera: "Si",
-    imagen: fotoMaso,
+    imagenes: [fotoMaso, casaEsquina, fotoFea, fotoLinda]
   },
   {
     id: "4",
@@ -109,7 +110,7 @@ export const propiedades = [
     orientacion: "oeste",
     tipoDePiso: "Parquet",
     cochera: "No",
-    imagen: fotoLinda, // placeholder
+    imagenes: [fotoLinda, casaEsquina, fotoFea,  fotoMaso]
   },
   {
     id: "5",
@@ -136,7 +137,7 @@ export const propiedades = [
     orientacion: "oeste",
     tipoDePiso: "Parquet",
     cochera: "No",
-    imagen: fotoFea,
+    imagenes: [fotoFea, casaEsquina, fotoLinda, fotoMaso]
   },
   {
     id: "6",
@@ -163,6 +164,6 @@ export const propiedades = [
     orientacion: "este",
     tipoDePiso: "Ceramica",
     cochera: "Si",
-    imagen: fotoMaso, // placeholder
+    imagenes: [fotoFea, casaEsquina,  fotoLinda, fotoMaso]
   },
 ];

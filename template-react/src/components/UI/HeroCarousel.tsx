@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import fotoSlide0 from "../../assets/dubai123.jpg";
 import fotoSlide1 from "../../assets/19bb0fc2c7ce-dubai-panoramica-t.jpg";
-import fotoSlide2 from "../../assets/foto_fondo.jpg";
+import fotoSlide2 from "../../assets/casaEsquina.jpeg";
 
 export default function HeroCarousel() {
   const slides = [fotoSlide0, fotoSlide1, fotoSlide2];
