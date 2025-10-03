@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import perfilImage from '../assets/perfilFacebookPisaccoPropiedades.jpg';
 import { Link } from 'react-router-dom';
 

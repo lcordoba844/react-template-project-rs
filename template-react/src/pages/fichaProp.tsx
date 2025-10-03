@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import fotoDpto from "../assets/Screenshot 2025-10-01 at 17.03.29.png"
 import dptoLourdes from "../assets/DptoBarrioLourdes.png"
-import { Menu, X } from "lucide-react"
-import { FaFacebook, FaInstagram, FaWhatsapp, FaMapPin } from 'react-icons/fa';
+//import { Menu, X } from "lucide-react"
+//import { FaFacebook, FaInstagram, FaWhatsapp, FaMapPin } from 'react-icons/fa';
 
 import { propiedades } from "../data/propiedades";
 import { useEffect } from "react";

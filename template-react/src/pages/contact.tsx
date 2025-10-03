@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+interface FormData {
+  name: string;
+  mail: string;
+  msg: string;
+}
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     mail: '',
     msg: '',
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // 🔹 Tipamos el evento para inputs, textareas y selects
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleWhatsApp = () => {
@@ -32,17 +42,16 @@ const ContactForm = () => {
   return (
     <div id="contactForm" className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-8 sm:py-16 bg-gray-50">
       <div className="flex items-center justify-center text-black px-4">
-        <p className="text-center text-base sm:text-lg font-semibold">Contáctanos para más información</p>
+        <p className="text-center text-base sm:text-lg font-semibold">
+          Contáctanos para más información
+        </p>
       </div>
       <div>
         <div className="p-4">
           <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md space-y-4">
             <div>
               <h1 className="font-bold text-lg">Contactate</h1>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Nombre
               </label>
               <input
@@ -57,10 +66,7 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="mail"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="mail" className="block text-sm font-medium text-gray-700">
                 Mail
               </label>
               <input
@@ -75,21 +81,18 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="msg"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="msg" className="block text-sm font-medium text-gray-700">
                 Describa la propiedad a buscar:
               </label>
               <textarea
                 id="msg"
                 name="msg"
-                rows="4"
+                rows={4} // 👈 en TS no uses string, mejor número
                 value={formData.msg}
                 onChange={handleChange}
                 required
                 className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
+              />
             </div>
 
             <div className="flex gap-4">
