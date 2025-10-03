@@ -9,7 +9,7 @@ import ContactForm from "./pages/contact";
 function App() {
   return (
     <div className="flex flex-col min-h-screen text-color-white">
-      <Router>
+      <Router basename="/react-template-project-rs">
         <Routes>
           <Route path="/" element={<MainLayout><Home /></MainLayout>} />
           <Route path="/about" element={<MainLayout><About /></MainLayout>}/>
