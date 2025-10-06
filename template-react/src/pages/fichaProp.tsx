@@ -98,6 +98,16 @@ export default function FichaProp() {
               ))}
             </ul>
           </div>
+          <div className="w-full h-96 mt-8">
+            <iframe
+              src={`https://www.google.com/maps?q=${prop.lat},${prop.lng}&hl=es&z=15&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </main>
 
