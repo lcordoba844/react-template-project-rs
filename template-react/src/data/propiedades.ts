@@ -29,6 +29,8 @@ export const propiedades = [
     orientacion: "oeste",
     tipoDePiso: "Porcelanato",
     cochera: "si",
+    lat:"-33.8992190961129",
+    lng: "-61.10777964567121",
     imagenes: [casaEsquina, fotoFea, fotoLinda, fotoMaso]
   },
   {
