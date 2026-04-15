@@ -20,10 +20,10 @@ export default function FichaProp() {
   const images = prop.imagenes || []; // puede tener 1 o más elementos
 
   return (
-    <div className="flex flex-col min-h-screen pt-16">
+    <div className="flex flex-col min-h-screen">
       
       {/* Section */}
-      <div className="bg-slate-100 py-10">
+      <div className="bg-slate-100 pt-16 pb-10">
         <div className="max-w-6xl mx-auto px-6">
 
           {/* Header */}
