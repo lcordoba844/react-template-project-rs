@@ -1,4 +1,4 @@
-import fotoLinda from "../assets/DptoBarrioLourdes.png"
+import fotoLinda from "../assets/foto_fondo.jpg"
 import fotoFea from "../assets/19bb0fc2c7ce-dubai-panoramica-t.jpg"
 import fotoMaso from "../assets/dubai123.jpg"
 import casaEsquina from "../assets/casaEsquina.jpeg"

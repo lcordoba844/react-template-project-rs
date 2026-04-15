@@ -37,51 +37,66 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form className="w-full max-w-md bg-white p-6 rounded-lg shadow-md space-y-4">
-      <h1 className="text-xl font-bold text-gray-900">Contactate</h1>
+    <form className="w-full bg-white p-8 rounded-xl shadow-md space-y-6">
+      
+      <div className="space-y-2">
+        <h2 className="text-xl sm:text-2xl font-semibold text-gray-800">
+          Enviá tu consulta
+        </h2>
+        <p className="text-gray-600 text-base leading-relaxed">
+          Completá el formulario y te responderemos a la brevedad
+        </p>
+      </div>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Nombre"
-        value={formData.name}
-        onChange={handleChange}
-        className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+      {/* Inputs */}
+      <div className="space-y-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Nombre"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#db2754] focus:border-transparent transition"
+        />
 
-      <input
-        type="email"
-        name="mail"
-        placeholder="Mail"
-        value={formData.mail}
-        onChange={handleChange}
-        className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+        <input
+          type="email"
+          name="mail"
+          placeholder="Correo electrónico"
+          value={formData.mail}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#db2754] focus:border-transparent transition"
+        />
 
-      <textarea
-        name="msg"
-        rows={4}
-        placeholder="Mensaje"
-        value={formData.msg}
-        onChange={handleChange}
-        className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+        <textarea
+          name="msg"
+          rows={4}
+          placeholder="Mensaje"
+          value={formData.msg}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#db2754] focus:border-transparent transition resize-none"
+        />
+      </div>
 
-      <div className="flex gap-4">
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-3">
+        
         <button
           type="button"
           onClick={handleWhatsApp}
-          className="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition"
+          className="flex-1 bg-[#db2754] text-white py-3 px-4 rounded-lg font-medium hover:bg-[#c0214a] transition"
         >
-          WhatsApp
+          Enviar por WhatsApp
         </button>
+
         <button
           type="button"
           onClick={handleEmail}
-          className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-900 transition"
+          className="flex-1 border border-[#db2754] text-[#db2754] py-3 px-4 rounded-lg font-medium hover:bg-[#db2754] hover:text-white transition"
         >
-          Email
+          Enviar por Email
         </button>
+
       </div>
     </form>
   );

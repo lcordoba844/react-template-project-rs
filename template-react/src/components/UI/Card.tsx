@@ -15,29 +15,47 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ id, direccion, titulo, ciudad, tipo, imagen, banos, dormitorios, metros2 }) => {
   return (
-    <div className="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
-      <img src={imagen} alt={direccion} className="w-full h-48 object-cover" />
+    <div className="w-full bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 cursor-pointer">
       
-      <div className="p-4">
-        <p className="text-xs text-gray-500">PN_000{id} | {tipo}</p>
-        <h2 className="text-lg font-bold mt-1">{titulo}</h2>
-        <h3 className="text-sm font-medium">{ciudad}</h3>
+      <div className="relative">
+        <img src={imagen} alt={direccion} className="w-full h-48 object-cover" />
 
-        <div className="flex justify-between mt-4 text-gray-700">
-          <div className="flex items-center gap-1">
-            <FaBath className="text-blue-500" />
-            <span>{banos}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <FaBed className="text-green-500" />
-            <span>{dormitorios}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <FaRulerCombined className="text-purple-500" />
-            <span>{metros2} m²</span>
+        <span className="absolute top-3 left-3 bg-[#db2754] text-white text-xs px-2 py-1 rounded-md shadow">
+          {tipo}
+        </span>
+      </div>
+
+      <div className="p-4">
+        <p className="text-xs text-gray-400">
+          PN_000{id}
+        </p>
+
+        <h2 className="text-lg font-semibold text-gray-800 mt-1 line-clamp-2">
+          {titulo}
+        </h2>
+
+        <p className="text-sm text-gray-500">
+          {ciudad}
+        </p>
+
+        <div className="border-t mt-4 pt-3">
+          <div className="flex justify-between text-gray-600 text-sm">
+            <div className="flex items-center gap-1">
+              <FaBath />
+              <span>{banos}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <FaBed />
+              <span>{dormitorios}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <FaRulerCombined />
+              <span>{metros2} m²</span>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 };

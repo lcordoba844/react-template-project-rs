@@ -5,7 +5,6 @@ import fotoSlide2 from "../../assets/casaEsquina.jpeg";
 
 export default function HeroCarousel() {
   const slides = [fotoSlide0, fotoSlide1, fotoSlide2];
-
   const [current, setCurrent] = useState(0);
 
   // autoplay cada 5s
@@ -18,7 +17,8 @@ export default function HeroCarousel() {
 
   return (
     <div className="relative w-full h-[80vh] overflow-hidden">
-      {/* Fondo carrusel */}
+      
+      {/* Slides */}
       {slides.map((slide, index) => (
         <img
           key={index}
@@ -29,6 +29,35 @@ export default function HeroCarousel() {
           }`}
         />
       ))}
+
+      {/* Dark overlay (VERY important) */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* Content */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-center text-white px-6 max-w-2xl">
+          
+          <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
+            Encontrá tu próximo hogar
+          </h1>
+
+          <p className="mt-4 text-lg text-white/90">
+            Propiedades en Santa Fe, Buenos Aires y alrededores
+          </p>
+
+          <button
+            onClick={() => {
+              document
+                .getElementById("propiedades")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="mt-6 bg-[#db2754] px-6 py-3 rounded-lg font-semibold hover:bg-[#c0214a] transition"
+          >
+            Ver propiedades
+          </button>
+
+        </div>
+      </div>
     </div>
   );
 }

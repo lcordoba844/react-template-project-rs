@@ -6,43 +6,51 @@ import logoImage from '../assets/perfilFacebookPisaccoPropiedades.jpg';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-
   return (
     <nav className="bg-[#112e3d] shadow-md fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
+          
           {/* Logo + Nombre */}
-          <div className="flex items-center">
-            <img src={logoImage} alt="img" className="h-8 w-8 mr-2 rounded-full" />
-            <Link to="/" className="text-xl font-semibold text-white">Pisacco Propiedades</Link>
+          <div className="flex items-center gap-2">
+            <img src={logoImage} alt="logo" className="h-8 w-8 rounded-full" />
+            <Link to="/" className="text-lg sm:text-xl font-semibold text-white">
+              Pisacco Propiedades
+            </Link>
           </div>
 
-          {/* Botón Hamburguesa en mobile */}
+          {/* Mobile button */}
           <div className="flex md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white focus:outline-none"
-            >
+            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
-          {/* Links Desktop */}
-          <div className="hidden md:flex space-x-6">
-            <Link to="/" className="text-white hover:text-blue-600 transition">Inicio</Link>
-            <Link to="/about" className="text-white hover:text-blue-600 transition">Sobre Nosotros</Link>
-            <Link to="/contact" className="text-white hover:text-blue-600 transition">Contacto</Link>
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link to="/" className="text-white/90 hover:text-white transition">
+              Inicio
+            </Link>
+            <Link to="/about" className="text-white/90 hover:text-white transition">
+              Sobre Nosotros
+            </Link>
+            <Link to="/contact" className="text-white/90 hover:text-white transition">
+              Contacto
+            </Link>
           </div>
+
         </div>
       </div>
 
-      {/* Menú Mobile */}
+      {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#112e3d] px-4 pb-4 space-y-2 shadow-md">
-          <Link to="/" className="block text-white hover:text-blue-600">Inicio</Link>
-          <Link to="/contact" className="block text-white hover:text-blue-600">Contacto</Link>
-          <Link to="/about" className="block text-white hover:text-blue-600">Sobre Nosotros</Link>
+        <div className="md:hidden bg-[#112e3d] border-t border-white/10">
+          <div className="max-w-6xl mx-auto px-6 py-4 space-y-3">
+            <Link to="/" className="block text-white/90 hover:text-white">Inicio</Link>
+            <Link to="/about" className="block text-white/90 hover:text-white">Sobre Nosotros</Link>
+            <Link to="/contact" className="block text-white/90 hover:text-white">Contacto</Link>
+          </div>
         </div>
       )}
     </nav>
